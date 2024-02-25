@@ -1,0 +1,10 @@
+1.实验目的
+将论文提出的LU+DS技术与本地 Graphite ICM 进行了比较。实验将分别在两种配置下（ICM、LU+DS），评估六种时序图遍历算法（TR、SSSP、EAT、LD、FAST和 TMST）。目的是证明LU+DS技术可显著减少算法的平均运行时间。
+2.实验预期输出
+LU 技术预计会减少每个 TimeWarp 的报文数量，从而减少每个 warp 的时间。DS 技术预计会减少报文的数量，这不仅会减少通信时间，还会降低wrap的成本。
+实验将给出三个衡量指标：
+① makespan reduction。含义为相对于本地 ICM，LU+DS 所实现的时间跨度减少率。由以下公式得出：
+② Reduction in message count。含义为message数量的平均下降率
+③ Reduction in warp time。含义为warp时间的平均下降率
+预期输出为，六种遍历算法都能获得较为优秀的makespan reduction、Reduction in message count、Reduction in warp time指标，达到论文图表数据。
+使用 LU+DS 时，各种算法wallclock time明显降低（效率在百分之五十左右）。
